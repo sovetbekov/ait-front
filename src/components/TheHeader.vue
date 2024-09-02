@@ -1,12 +1,13 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const router = useRouter()
 </script>
 
 <template>
   <div flex="~ gap-2 " mx-auto mt-6 items-center justify-between>
     <div class="flex flex-row items-center gap-22">
       <RouterLink to="/" :title="t('button.home')" icon-btn>
-        <img src="../../public/logo.png" width="100">
+        <img src="/ait-old-logo.png" width="100">
       </RouterLink>
 
       <div flex="~ gap-10" text-normal>
@@ -26,10 +27,10 @@ const { t } = useI18n()
     </div>
 
     <div class="flex flex-row items-center gap-4">
-      <button class="button-6" rounded-lg>
+      <button class="button-6" rounded-lg @click="router.push('/signin/login')">
         {{ t('header.login') }}
       </button>
-      <button class="button-31" rounded-lg>
+      <button class="button-31" rounded-lg @click="router.push('/signin/create-account')">
         {{ t('header.create-account') }}
       </button>
     </div>

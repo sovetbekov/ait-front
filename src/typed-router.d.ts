@@ -21,7 +21,13 @@ declare module 'vue-router/auto-routes' {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
+    '/course/[id]': RouteRecordInfo<'/course/[id]', '/course/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/course/module/[id]': RouteRecordInfo<'/course/module/[id]', '/course/module/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/courses': RouteRecordInfo<'/courses', '/courses', Record<never, never>, Record<never, never>>,
     '/hi/[name]': RouteRecordInfo<'/hi/[name]', '/hi/:name', { name: ParamValue<true> }, { name: ParamValue<false> }>,
+    '/profile': RouteRecordInfo<'/profile', '/profile', Record<never, never>, Record<never, never>>,
     '/README': RouteRecordInfo<'/README', '/README', Record<never, never>, Record<never, never>>,
+    '/signin/create-account': RouteRecordInfo<'/signin/create-account', '/signin/create-account', Record<never, never>, Record<never, never>>,
+    '/signin/login': RouteRecordInfo<'/signin/login', '/signin/login', Record<never, never>, Record<never, never>>,
   }
 }
